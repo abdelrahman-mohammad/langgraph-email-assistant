@@ -40,6 +40,14 @@ packages = ["email_assistant"]
 [tool.setuptools.package-data]
 "*" = ["py.typed"]
 
+[tool.pytest.ini_options]
+# src-layout with a PEP 420 namespace package (no top-level __init__.py):
+# importlib mode + namespace awareness lets pytest import test files that live
+# inside the package without polluting sys.path.
+addopts = "--import-mode=importlib"
+consider_namespace_packages = true
+pythonpath = ["src"]
+
 [tool.ruff]
 lint.select = [
     "E",    # pycodestyle
