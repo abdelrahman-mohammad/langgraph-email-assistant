@@ -37,10 +37,11 @@ htmlcov/
 .vscode/
 .idea/
 
-# Generated eval artifacts
+# Generated eval / graph artifacts
 **/graph.png
 **/*.mmd
 eval/results/
+src/email_assistant/*.png
 
 # OS
 .DS_Store
